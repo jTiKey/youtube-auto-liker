@@ -10,7 +10,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/*"],
+      "matches": ["https://www.youtube.com/watch?v=*"],
       "js": ["scripts/waitForLikeToAppear.js", "scripts/likeVideo.js", "main.js"],
       "type": "module"
     }

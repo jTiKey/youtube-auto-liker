@@ -1,8 +1,8 @@
-chrome.webNavigation.onHistoryStateUpdated.addListener((details) => {
-  if (details.url && details.url.startsWith("https://www.youtube.com/watch")) {
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === 'complete' && tab.url.includes('youtube.com/watch')) {
     chrome.scripting.executeScript({
-      target: { tabId: details.tabId },
-      files: ["content.js"]
-    }).catch((error) => console.error("Injection error:", error));
+      target: { tabId },
+      files: ["scripts/newTab.js", "scripts/waitForLikeToAppear.js", "scripts/likeVideo.js", "main.js"]
+    });
   }
 });
