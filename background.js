@@ -4,6 +4,8 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       target: { tabId },
       files: [
         "scripts/newTab.js",
+        "scripts/changeLikeColor.js",
+        "scripts/isSubscribedBell.js",
         "scripts/findObserverNode.js",
         "scripts/waitForLikeToAppear.js",
         "scripts/likeVideo.js",

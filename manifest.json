@@ -12,6 +12,8 @@
     {
       "matches": ["https://www.youtube.com/watch?v=*"],
       "js": [
+        "scripts/changeLikeColor.js",
+        "scripts/isSubscribedBell.js",
         "scripts/findObserverNode.js",
         "scripts/waitForLikeToAppear.js",
         "scripts/likeVideo.js",
