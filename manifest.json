@@ -11,7 +11,12 @@
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/watch?v=*"],
-      "js": ["scripts/waitForLikeToAppear.js", "scripts/likeVideo.js", "main.js"],
+      "js": [
+        "scripts/findObserverNode.js",
+        "scripts/waitForLikeToAppear.js",
+        "scripts/likeVideo.js",
+        "main.js"
+      ],
       "type": "module"
     }
   ]
