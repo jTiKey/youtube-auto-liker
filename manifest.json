@@ -5,12 +5,14 @@
   "permissions": ["scripting", "activeTab", "webNavigation"],
   "host_permissions": ["https://www.youtube.com/*"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
-      "js": ["content.js"]
+      "js": ["scripts/waitForLikeToAppear.js", "scripts/likeVideo.js", "main.js"],
+      "type": "module"
     }
   ]
 }
