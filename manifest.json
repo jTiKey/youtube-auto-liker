@@ -1,12 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Like Button Detector",
+  "name": "YouTube Automatic Like on Subscriptions Bell",
   "version": "1.0",
   "permissions": ["scripting", "activeTab", "webNavigation"],
-  "host_permissions": ["https://www.youtube.com/*"],
+  "host_permissions": ["https://www.youtube.com/watch?v=*"],
   "background": {
-    "service_worker": "background.js",
-    "type": "module"
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
@@ -18,8 +17,7 @@
         "scripts/waitForLikeToAppear.js",
         "scripts/likeVideo.js",
         "main.js"
-      ],
-      "type": "module"
+      ]
     }
   ]
 }
